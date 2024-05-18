@@ -32,16 +32,16 @@ class Human(BMI):
     
     def __repr__(self):
         message = ""
-        message += f"姓名:{self.name}\n"
-        message += f"國文:{self.weight}\n"
-        message += f"英文:{self.height}\n"
+        message += f"Name:{self.name}\n"
+        message += f"Weight:{self.weight}\n"
+        message += f"Height:{self.height}\n"
         return message
     
     def bmi(self) -> float: #實體的method
-        return self.weight / ((self.height/100)**2)
+        return round(self.weight / ((self.height/100)**2),ndigits=2)
     
 
-s1 = Human("Johnathan",158,79)
+s1 = Human("Johnathan",79,158)
 #print(type(s1))
 print(s1.name)
 print(f"BMI:{s1.bmi()}")
